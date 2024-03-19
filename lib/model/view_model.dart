@@ -9,11 +9,11 @@ class ViewModel with ChangeNotifier{
   get busy => _busy;
 
   void turnIdle(){
-    _busy = true;
-  }
-  void turnBusy(){
     _busy = false;
     notifyListeners();
+  }
+  void turnBusy(){
+    _busy = true;
   }
 
   void update(AsyncCallback fn) async{
